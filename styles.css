@@ -1,0 +1,206 @@
+/* Radial Gradient: hsl(214, 47%, 23%) to hsl(237, 49%, 15%)
+### Neutral
+
+- Dark Text: hsl(229, 25%, 31%)
+- Score Text: hsl(229, 64%, 46%)
+- Header Outline: hsl(217, 16%, 45%)
+
+### Primary
+
+- Scissors Gradient: hsl(39, 89%, 49%) to hsl(40, 84%, 53%)
+- Paper Gradient: hsl(230, 89%, 62%) to hsl(230, 89%, 65%)
+- Rock Gradient: hsl(349, 71%, 52%) to hsl(349, 70%, 56%)
+- Lizard Gradient: hsl(261, 73%, 60%) to hsl(261, 72%, 63%)
+- Cyan: hsl(189, 59%, 53%) to hsl(189, 58%, 57%) */
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed&display=swap');
+
+:root{
+    --darktext: hsl(229, 25%, 31%);
+    --scoretext: hsl(229, 64%, 46%);
+    --headeroutline:  hsl(217, 16%, 45%);
+
+    --radialgradient: hsl(214, 47%, 23%), hsl(237, 49%, 15%);
+    --ScissorsGradient: hsl(39, 89%, 49%),  hsl(40, 84%, 53%);
+    --PaperGradient: hsl(230, 89%, 62%), hsl(230, 89%, 65%);
+--RockGradient: hsl(349, 71%, 52%), hsl(349, 70%, 56%);
+--LizardGradient: hsl(261, 73%, 60%), hsl(261, 72%, 63%);
+--Cyan: hsl(189, 59%, 53%), hsl(189, 58%, 57%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-family: "Barlow Semi Condensed";
+}
+.Game {
+    background: linear-gradient(var(--radialgradient));
+}
+.header-game_logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 2em;
+    padding-top: 2em;
+}
+.the-header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 3px solid grey ;
+    padding: 2em;
+    border-radius: 15px;
+    width: 100%;
+}
+.the-header .logo {
+    margin-right: 30em;
+}
+.score {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 1.2em 2.5em;
+    border-radius: 15px;
+}
+.score-text {
+    color: var(--scoretext);
+    font-family: 'Barlow Semi Condensed';
+    font-weight: 900;
+    letter-spacing: 5px;
+}
+.the-score {
+color: var(--darktext);
+font-size: 60px;
+font-weight: 900;
+}
+.thegamebutton {
+    position: relative;
+}
+.Scissors button{
+    border-radius: 50%;
+    padding: 1em;
+    border: 20px solid hsl(39, 89%, 49%);
+   position: absolute;
+   top: -350px;
+   left: -55px;
+}
+
+.paper button {
+    border-radius: 50%;
+    padding: 1em;
+    border: 20px solid hsl(230, 89%, 62%);
+    position: absolute;
+   top: -260px;
+   left: 90px;
+}
+.paper {
+    position: relative;
+}
+.rock button {
+    border-radius: 50%;
+    padding: 1em;
+    border: 20px solid hsl(349, 71%, 52%);
+    position: absolute;
+    top: -90px;
+    left: 60px;
+}
+
+.lizard button {
+    border-radius: 50%;
+    padding: 1em;
+    border: 20px solid hsl(261, 73%, 60%);
+    position: absolute;
+    top: -90px;
+    left: -170px;
+}
+.spock button {
+    border-radius: 50%;
+    padding: 1em;
+    padding-left: 1.5em;
+    border: 20px solid hsl(189, 59%, 53%);
+    position: absolute;
+    top: -260px;
+    left: -200px;
+}
+.rock-paper-scissors button {
+    cursor: pointer;
+}
+.rock-paper-scissors {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5em;
+}
+.RULES button {
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+    background: var(--radialgradient);
+    border: 2px solid grey;
+    padding: 0.6em 2.3em;
+    border-radius: 10px;
+}
+.RULES {
+    float: right;
+    padding-right: 3em;
+    padding-top: 4em;
+}
+
+.rules_close h1 {
+color: var(--darktext);
+font-weight: 900;
+font-size: 24px;
+font-weight: bolder;
+}
+.the_rules section{
+    display: flex;
+    justify-content: space-between;
+}
+.the_rules {
+    background-color: white;
+    width: fit-content;
+    padding: 2em;
+    border-radius: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+z-index: 2;
+display: none;
+}
+.close img {
+    width: 25px;
+    cursor: pointer;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(1px);
+    z-index: 1;
+    position: fixed;
+    display: none;
+}
+
+
+
+.win-lose {
+    display: flex;
+    justify-content: space-evenly ;
+    align-items: center;
+    margin-top:15em;
+}
+
+
+
