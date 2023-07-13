@@ -30,27 +30,27 @@
       <div class="rock-paper-scissors">
         <img src="/images/bg-pentagon.svg" alt="" />
         <div class="Scissors thegamebutton">
-          <button class="game_btn" id="scissors">
+          <button class="game_btn btnscissors" id="scissors">
             <img src="/images/icon-scissors.svg" alt="paper" />
           </button>
         </div>
         <div class="paper thegamebutton">
-          <button class="game_btn" id="paper">
+          <button class="game_btn btnpaper" id="paper">
             <img src="/images/icon-paper.svg" alt="paper" />
           </button>
         </div>
         <div class="rock thegamebutton">
-          <button class="game_btn" id="rock">
+          <button class="game_btn btnrock" id="rock">
             <img src="/images/icon-rock.svg" alt="paper" />
           </button>
         </div>
         <div class="lizard thegamebutton">
-          <button class="game_btn" id="lizard">
+          <button class="game_btn btnlizard" id="lizard">
             <img src="/images/icon-lizard.svg" alt="paper" />
           </button>
         </div>
         <div class="spock thegamebutton">
-          <button class="game_btn" id="spock">
+          <button class="game_btn btnspock" id="spock">
             <img src="/images/icon-spock.svg" alt="paper" />
           </button>
         </div>
@@ -61,6 +61,7 @@
         <section>
           <div class="rules_close">
             <h1>RULES</h1>
+        
           </div>
           <div class="close">
             <img src="/images/icon-close.svg" alt="" />
@@ -71,25 +72,21 @@
         </div>
       </div>
       <div class="overlay"></div>
-      <div class="win-lose">
+      <div class="win-lose hidden">
         <div class="you-picked">
           <h1>YOU PICKED</h1>
-          <button class="game_btn user_picked">
-            <img src="/images/icon-scissors.svg" alt="paper" />
-          </button>
+          
         </div>
 
         <div class="results">
           <h1 class="decides">YOU <span class="lose_or_win">LOSE</span></h1>
-          <button>PLAY AGAIN</button>
+          <button class="play-again">PLAY AGAIN</button>
         </div>
 
         <div class="house-picked">
           <h1>THE HOUSE PICKED</h1>
 
-          <button class="game_btn computer_picked">
-            <img src="/images/icon-spock.svg" alt="paper" />
-          </button>
+        
         </div>
        
   
@@ -98,6 +95,8 @@
         <button class="rules_game">RULES</button>
       </div>
     </div>
+
+  
     <script src="app.js"></script>
   </body>
 </html>

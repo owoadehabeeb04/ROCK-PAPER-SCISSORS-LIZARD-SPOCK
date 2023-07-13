@@ -40,6 +40,7 @@ html {
 }
 body {
     background: linear-gradient(var(--radialgradient));
+    height: 100%;
 }
 .header-game_logo {
     display: flex;
@@ -93,6 +94,37 @@ font-weight: 900;
    top: -350px;
    left: -55px;
 }
+.btnscissors {
+    border-radius: 50%;
+    padding: 1em;
+    border: 20px solid hsl(39, 89%, 49%);
+   
+}
+.btnpaper {
+    border-radius: 50%;
+    padding: 1em;
+    border: 20px solid hsl(230, 89%, 62%);
+   
+}
+.btnrock {
+    border-radius: 50%;
+    padding: 1em;
+    border: 20px solid hsl(349, 71%, 52%);
+   
+}
+.btnlizard {
+    border-radius: 50%;
+    padding: 1em;
+    border: 20px solid hsl(261, 73%, 60%);
+   
+}
+.btnspock {
+    border-radius: 50%;
+    padding: 1em;
+    padding-left: 1.5em;
+    border: 20px solid hsl(189, 59%, 53%);
+   
+}
 
 .paper button {
     border-radius: 50%;
@@ -142,6 +174,16 @@ font-weight: 900;
     align-items: center;
     margin-top: 5em;
 }
+/* .rules_close {
+    position: relative;
+  }
+  
+  .activeyoupicked {
+    position: absolute;
+    top: 100%;
+    left: 0;
+  } */
+  
 .RULES button {
     color: white;
     font-weight: 500;
@@ -208,8 +250,8 @@ position: fixed;
     display: flex;
     justify-content: space-evenly ;
     align-items: center;
-    margin-top: 15em;
-    display: none;
+    margin-top: 8em;
+    
     /* padding-bottom: 15em; */
 }
 .you-picked h1 {
@@ -220,12 +262,13 @@ position: fixed;
 .you-picked button {
     border-radius: 50%;
     padding: 1em;
-    border: 20px solid hsl(39, 89%, 49%);
+    
     margin-top: 1em;
 }
 .results h1 {
     color: white;
     font-size: 45px;
+
 }
 .results button {
     width: 100%;
@@ -246,10 +289,15 @@ margin-top: 1em;
     border-radius: 50%;
     padding: 1em;
     padding-left: 1.5em;
-    border: 20px solid hsl(189, 59%, 53%);
+   
     margin-top: 1em;
 
     
 }
 
-
+.hidden  {
+    display:none;
+}
+.buttongo {
+    display: none;
+}
