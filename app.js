@@ -27,6 +27,8 @@ document.querySelector(".lose_or_win").textContent = winorlose;
 // replacing
 console.log(document.querySelector(".user_picked"));
 console.log(document.getElementById("scissors"));
+
+
 // comparing the game
 function playRound(PlayerChose, ComputerChose, buttonPlayer) {
   if (PlayerChose === ComputerChose) {
@@ -54,7 +56,7 @@ function playRound(PlayerChose, ComputerChose, buttonPlayer) {
     computerpicked.innerHTML = `<img src="/images/icon-${ComputerChose}.svg" alt="paper" />`;
     computerpicked.setAttribute("id", `${ComputerChose}`);
     console.log(computerpicked);
-    const housepicked = document.querySelector(".house-picked");
+    const housepicked = document.querySelector(".btn");
     housepicked.appendChild(computerpicked.cloneNode(true));
 
 
@@ -74,7 +76,7 @@ function playRound(PlayerChose, ComputerChose, buttonPlayer) {
       // Get a reference to the child element
       var childElement = housepicked.lastChild;
       // Remove the child element
-      housepicked.removeChild(childElement);
+     console.log( housepicked.removeChild(childElement));
     });
     return "it is a tie ";
   } else if (
@@ -100,16 +102,26 @@ function playRound(PlayerChose, ComputerChose, buttonPlayer) {
     // replacing
 
     // THE USER PICKED
+
+
     const buttonplayer = buttonPlayer;
     console.log(buttonplayer);
+    
+
+
+
     const youpicked = document.querySelector(".you-picked");
     var button = buttonplayer.cloneNode(true);
     console.log(button);
     button.style.display = "inline-flex";
     console.log(youpicked.appendChild(button));
     console.log(youpicked);
+    youpicked.classList.add('box-shadow')
 
-    // THE COMPUTER PICKED
+
+
+    // THE COMPUTER PICKED 
+
     var computerpicked = document.createElement("button");
     computerpicked.classList.add("game_btn");
     computerpicked.classList.add(`btn${ComputerChose}`);
@@ -117,7 +129,7 @@ function playRound(PlayerChose, ComputerChose, buttonPlayer) {
     computerpicked.innerHTML = `<img src="/images/icon-${ComputerChose}.svg" alt="paper" />`;
     computerpicked.setAttribute("id", `${ComputerChose}`);
     console.log(computerpicked);
-    const housepicked = document.querySelector(".house-picked");
+    const housepicked = document.querySelector(".btn");
     housepicked.appendChild(computerpicked.cloneNode(true));
 
     // THE CHANGING TO WIN AND LOSE
@@ -130,12 +142,12 @@ function playRound(PlayerChose, ComputerChose, buttonPlayer) {
     play_again.addEventListener("click", function () {
       the_game.classList.remove("hidden");
       the_result_of_game.classList.add("hidden");
-
+youpicked.classList.remove('box-shadow')
       button.style.display = "none";
       // Get a reference to the child element
       var childElement = housepicked.lastChild;
       // Remove the child element
-      housepicked.removeChild(childElement);
+     console.log( housepicked.removeChild(childElement));
     });
 
     return `"you win" ${PlayerChose} ' beats' ${ComputerChose}`;
@@ -166,7 +178,9 @@ function playRound(PlayerChose, ComputerChose, buttonPlayer) {
     computerpicked.innerHTML = `<img src="/images/icon-${ComputerChose}.svg" alt="paper" />`;
     computerpicked.setAttribute("id", `${ComputerChose}`);
     console.log(computerpicked);
-    const housepicked = document.querySelector(".house-picked");
+    const house = document.querySelector('.house-picked')
+    house.classList.add('box-shadow')
+    const housepicked = document.querySelector(".btn");
     housepicked.appendChild(computerpicked.cloneNode(true));
 
 // THE CHANGING TO WIN AND LOSE
@@ -179,12 +193,13 @@ the_game.classList.add("hidden");
     play_again.addEventListener("click", function () {
       the_game.classList.remove("hidden");
       the_result_of_game.classList.add("hidden");
-
+      console.log(house.classList.remove('box-shadow'))
       button.style.display = "none";
       // Get a reference to the child element
       var childElement = housepicked.lastChild;
       // Remove the child element
-      housepicked.removeChild(childElement);
+     console.log( housepicked.removeChild(childElement));
+   
     });
     return `"you lose" ${PlayerChose} 'couldnt beat' ${ComputerChose}`;
   }
@@ -217,3 +232,5 @@ document.addEventListener("keydown", function (e) {
     }
   }
 });
+
+console.log(scored);

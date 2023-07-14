@@ -252,7 +252,7 @@ position: fixed;
     align-items: center;
     margin-top: 8em;
     
-    /* padding-bottom: 15em; */
+    padding-bottom: 10em;
 }
 .you-picked h1 {
     color: white;
@@ -300,4 +300,125 @@ margin-top: 1em;
 }
 .buttongo {
     display: none;
+}
+.house-picked h1 {
+    z-index: 2;
+}
+@media (max-width: 1030px) {
+    .box-shadow {
+        border-radius: 100%;
+        box-shadow: 0 0 0 40px #293251, 0 0 0 80px #232c4b;
+    }
+}
+@media (max-width: 920px) {
+    .box-shadow {
+        border-radius: 100%;
+        box-shadow: 0 0 0 40px #293251, 0 0 0 80px #232c4b;
+    }
+    .the-header .logo {
+        margin-right: 10em;
+    }   
+}
+@media (max-width: 760px) {
+    .box-shadow {
+        border-radius: 100%;
+        box-shadow: 0 0 0 40px #293251, 0 0 0 80px #232c4b;
+    }
+    .the-header .logo {
+        margin-right: 10em;
+    }   
+    .results {
+        justify-self: end;
+        align-self: flex-end;
+        padding-top :20em;
+    }
+    .you-picked {
+        justify-self: self-start;
+        align-self: flex-start;
+    }
+    .house-picked {
+        justify-self: self-start;
+        align-self: flex-start;
+    }
+    .win-lose {
+        padding-bottom: 2em;
+    }
+}
+@media (max-width: 565px) {
+    .the-header .logo {
+        margin-right: 0em;
+    }   
+    .the-header {
+        justify-content: space-between;
+    }
+    .header-game_logo {
+        width: auto;
+    }
+    .decides {
+        text-align: center;
+    }
+    
+}
+
+@media (max-width: 500px) {
+.score {
+    padding: 1.2em 1.2em;
+    width: fit-content;
+}
+.logo img {
+    width: 100%;
+}
+.RULES {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 0em;
+    float: none;
+}
+
+}
+@media (max-width: 390px){
+.win-lose {
+    flex-direction: column;
+    justify-content: center;
+    align-items:center ;
+margin-top: 4em;
+}
+.win-lose {
+    padding-bottom: 0em;
+}
+.results {
+    padding-top: 0em;
+}
+.results {
+    justify-self: center;
+    align-self: center;
+    padding-top :5em;
+    padding-bottom :5em;
+}
+.you-picked {
+    justify-self: center;
+    align-self: center
+}
+.house-picked {
+    justify-self: center;
+    align-self: center;
+    padding-top: 1em;
+}
+.RULES {
+    padding-top: 8em;
+}
+
+} 
+.btn button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.house-picked {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 0em;
 }
