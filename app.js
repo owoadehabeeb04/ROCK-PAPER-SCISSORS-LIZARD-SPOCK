@@ -46,7 +46,7 @@ function playRound(PlayerChose, ComputerChose, buttonPlayer) {
     computerpicked.classList.add("game_btn");
     computerpicked.classList.add(`btn${ComputerChose}`);
 
-    computerpicked.innerHTML = `<img src="/images/icon-${ComputerChose}.svg" alt="paper" />`;
+    computerpicked.innerHTML = `<img src="./images/icon-${ComputerChose}.svg" alt="paper" />`;
     computerpicked.setAttribute("id", `${ComputerChose}`);
 
     const housepicked = document.querySelector(".btn");
