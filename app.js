@@ -2,9 +2,8 @@
 const button_game = document.querySelectorAll(".game_btn");
 button_game.forEach((button) => {
   button.addEventListener("click", function () {
-    console.log(button.id, computerGets());
+    button.id, computerGets();
     const the_result = playRound(button.id, computerGets(), button);
-    console.log(the_result);
   });
 });
 
@@ -14,7 +13,6 @@ const computerGets = function () {
   const guess = Math.floor(Math.random() * TheChoices.length);
   return TheChoices[guess];
 };
-// console.log(computerGets());
 
 // the score
 let score = document.querySelector(".the-score").textContent;
@@ -25,9 +23,8 @@ let win_lose = document.querySelector(".lose_or_win").textContent;
 winorlose = "WIN";
 document.querySelector(".lose_or_win").textContent = winorlose;
 // replacing
-console.log(document.querySelector(".user_picked"));
-console.log(document.getElementById("scissors"));
-
+document.querySelector(".user_picked");
+document.getElementById("scissors");
 
 // comparing the game
 function playRound(PlayerChose, ComputerChose, buttonPlayer) {
@@ -36,17 +33,13 @@ function playRound(PlayerChose, ComputerChose, buttonPlayer) {
     winorlose = "TIED!";
     document.querySelector(".lose_or_win").textContent = winorlose;
 
-  
-
     // THE USER PICKED
     const buttonplayer = buttonPlayer;
-    console.log(buttonplayer);
+    buttonplayer;
     const youpicked = document.querySelector(".you-picked");
     var button = buttonplayer.cloneNode(true);
-    console.log(button);
     button.style.display = "inline-flex";
-    console.log(youpicked.appendChild(button));
-    console.log(youpicked);
+    youpicked.appendChild(button);
 
     // THE COMPUTER PICKED
     var computerpicked = document.createElement("button");
@@ -55,18 +48,16 @@ function playRound(PlayerChose, ComputerChose, buttonPlayer) {
 
     computerpicked.innerHTML = `<img src="/images/icon-${ComputerChose}.svg" alt="paper" />`;
     computerpicked.setAttribute("id", `${ComputerChose}`);
-    console.log(computerpicked);
+
     const housepicked = document.querySelector(".btn");
     housepicked.appendChild(computerpicked.cloneNode(true));
 
-
-      // THE CHANGING TO WIN AND LOSE
-      const the_game = document.querySelector(".rock-paper-scissors");
-      const the_result_of_game = document.querySelector(".win-lose");
-      const play_again = document.querySelector(".play-again");
-      console.log(the_result_of_game.classList.remove("hidden"));
-      the_game.classList.add("hidden");
-
+    // THE CHANGING TO WIN AND LOSE
+    const the_game = document.querySelector(".rock-paper-scissors");
+    const the_result_of_game = document.querySelector(".win-lose");
+    const play_again = document.querySelector(".play-again");
+    the_result_of_game.classList.remove("hidden");
+    the_game.classList.add("hidden");
 
     play_again.addEventListener("click", function () {
       the_game.classList.remove("hidden");
@@ -76,7 +67,7 @@ function playRound(PlayerChose, ComputerChose, buttonPlayer) {
       // Get a reference to the child element
       var childElement = housepicked.lastChild;
       // Remove the child element
-     console.log( housepicked.removeChild(childElement));
+      housepicked.removeChild(childElement);
     });
     return "it is a tie ";
   } else if (
@@ -103,24 +94,15 @@ function playRound(PlayerChose, ComputerChose, buttonPlayer) {
 
     // THE USER PICKED
 
-
     const buttonplayer = buttonPlayer;
-    console.log(buttonplayer);
-    
-
-
 
     const youpicked = document.querySelector(".you-picked");
     var button = buttonplayer.cloneNode(true);
-    console.log(button);
     button.style.display = "inline-flex";
-    console.log(youpicked.appendChild(button));
-    console.log(youpicked);
-    youpicked.classList.add('box-shadow')
+    youpicked.appendChild(button);
+    youpicked.classList.add("box-shadow");
 
-
-
-    // THE COMPUTER PICKED 
+    // THE COMPUTER PICKED
 
     var computerpicked = document.createElement("button");
     computerpicked.classList.add("game_btn");
@@ -128,7 +110,7 @@ function playRound(PlayerChose, ComputerChose, buttonPlayer) {
 
     computerpicked.innerHTML = `<img src="/images/icon-${ComputerChose}.svg" alt="paper" />`;
     computerpicked.setAttribute("id", `${ComputerChose}`);
-    console.log(computerpicked);
+
     const housepicked = document.querySelector(".btn");
     housepicked.appendChild(computerpicked.cloneNode(true));
 
@@ -136,18 +118,18 @@ function playRound(PlayerChose, ComputerChose, buttonPlayer) {
     const the_game = document.querySelector(".rock-paper-scissors");
     const the_result_of_game = document.querySelector(".win-lose");
     const play_again = document.querySelector(".play-again");
-    console.log(the_result_of_game.classList.remove("hidden"));
+    the_result_of_game.classList.remove("hidden");
     the_game.classList.add("hidden");
 
     play_again.addEventListener("click", function () {
       the_game.classList.remove("hidden");
       the_result_of_game.classList.add("hidden");
-youpicked.classList.remove('box-shadow')
+      youpicked.classList.remove("box-shadow");
       button.style.display = "none";
       // Get a reference to the child element
       var childElement = housepicked.lastChild;
       // Remove the child element
-     console.log( housepicked.removeChild(childElement));
+      housepicked.removeChild(childElement);
     });
 
     return `"you win" ${PlayerChose} ' beats' ${ComputerChose}`;
@@ -158,17 +140,15 @@ youpicked.classList.remove('box-shadow')
 
     winorlose = "LOSE!";
     document.querySelector(".lose_or_win").textContent = winorlose;
-    
 
     // THE USER PICKED
     const buttonplayer = buttonPlayer;
-    console.log(buttonplayer);
+
     const youpicked = document.querySelector(".you-picked");
     var button = buttonplayer.cloneNode(true);
-    console.log(button);
+
     button.style.display = "inline-flex";
-    console.log(youpicked.appendChild(button));
-    console.log(youpicked);
+    youpicked.appendChild(button);
 
     // THE COMPUTER PICKED
     var computerpicked = document.createElement("button");
@@ -177,29 +157,28 @@ youpicked.classList.remove('box-shadow')
 
     computerpicked.innerHTML = `<img src="/images/icon-${ComputerChose}.svg" alt="paper" />`;
     computerpicked.setAttribute("id", `${ComputerChose}`);
-    console.log(computerpicked);
-    const house = document.querySelector('.house-picked')
-    house.classList.add('box-shadow')
+
+    const house = document.querySelector(".house-picked");
+    house.classList.add("box-shadow");
     const housepicked = document.querySelector(".btn");
     housepicked.appendChild(computerpicked.cloneNode(true));
 
-// THE CHANGING TO WIN AND LOSE
-const the_game = document.querySelector(".rock-paper-scissors");
-const the_result_of_game = document.querySelector(".win-lose");
-const play_again = document.querySelector(".play-again");
-console.log(the_result_of_game.classList.remove("hidden"));
-the_game.classList.add("hidden");
-    
+    // THE CHANGING TO WIN AND LOSE
+    const the_game = document.querySelector(".rock-paper-scissors");
+    const the_result_of_game = document.querySelector(".win-lose");
+    const play_again = document.querySelector(".play-again");
+    the_result_of_game.classList.remove("hidden");
+    the_game.classList.add("hidden");
+
     play_again.addEventListener("click", function () {
       the_game.classList.remove("hidden");
       the_result_of_game.classList.add("hidden");
-      console.log(house.classList.remove('box-shadow'))
+      house.classList.remove("box-shadow");
       button.style.display = "none";
       // Get a reference to the child element
       var childElement = housepicked.lastChild;
       // Remove the child element
-     console.log( housepicked.removeChild(childElement));
-   
+      housepicked.removeChild(childElement);
     });
     return `"you lose" ${PlayerChose} 'couldnt beat' ${ComputerChose}`;
   }
@@ -232,5 +211,3 @@ document.addEventListener("keydown", function (e) {
     }
   }
 });
-
-console.log(scored);
